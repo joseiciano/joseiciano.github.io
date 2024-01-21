@@ -170,7 +170,8 @@ li {
   --green: #57c26e;
   --red: #fe8298;
   --blue: #13b7cd;
-  --font-color: var(--green);
+  --font-color: var(--main-highlight);
+  --main-highlight: var(--green);
 }
 
 .container {
@@ -226,9 +227,19 @@ h2 {
   margin-top: 1.5rem;
 }
 
-.icon {
+.icon,
+.vl {
   margin-left: 3.5%;
-  font-size: 1.8vw;
+}
+
+.vl {
+  border-left: 1px solid var(--main-highlight);
+  height: 80px;
+  margin-left: 3.5%;
+}
+
+.icon {
+  font-size: 1.5vw;
   color: var(--font-color);
 }
 
@@ -236,15 +247,30 @@ h2 {
   text-shadow: 2px 2px 5px var(--font-color);
 }
 
-.btn {
-  background-color: var(--green);
-  border: none;
-  border-radius: 10px;
-  height: 52.5px;
+.center-vertical {
   margin-top: auto;
   margin-bottom: auto;
+}
 
+.header-hr {
+  background-color: var(--main-highlight);
+  border-color: var(--main-highlight);
+  width: 100%;
+}
+
+.btn {
+  background-color: var(--main-highlight);
+  border: none;
+  border-radius: 10px;
+  height: 6vh;
+  max-width: 130px;
+  width: 22.5vw;
   color: white;
+  cursor: pointer;
+}
+
+.btn-text {
+  font-size: min(3.5vw, 17px);
 }
 
 .typewriter h1 {
