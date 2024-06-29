@@ -1,0 +1,3 @@
+.time-line-container > div:last-child .main-dot > .main-line {
+  display: none;
+}

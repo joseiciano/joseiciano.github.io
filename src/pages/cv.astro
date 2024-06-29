@@ -1,0 +1,282 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import TimeLineElement from '../components/TimeLine.astro';
+
+const skills = {
+  programmingLanguages: {
+    displayName: 'Programming Languages',
+    values: ['Typescript', 'Javascript', 'Python', 'C++'],
+  },
+  webFrameworks: {
+    displayName: 'Web Frameworks',
+    values: ['React', 'NextJS', 'Astro', 'Angular'],
+  },
+  backendFrameworks: {
+    displayName: 'Backend Frameworks',
+    values: ['ExpressJS', 'NestJS'],
+  },
+  databases: {
+    displayName: 'Databases',
+    values: ['MongoDB', 'PostgreSQL', 'Firebase'],
+  },
+  miscellaneous: {
+    displayName: 'Miscellaneous',
+    values: ['AWS', 'NodeJS', 'Git'],
+  },
+};
+---
+
+<BaseLayout title="Resume">
+  <div class="mb-[5rem]">
+    <div
+      class="text-3xl font-bold hover:underline underline-offset-8 decoration-4 w-full"
+    >
+      <a href="./public/Jose_Iciano_Resume.pdf">
+        Click Here For Downloadable Version
+      </a>
+    </div>
+  </div>
+
+  <div class="mb-5">
+    <div
+      class="text-3xl w-full font-bold underline underline-offset-8 decoration-4"
+    >
+      Education
+    </div>
+  </div>
+
+  <div class="time-line-container grid gap-4 mb-10">
+    <TimeLineElement
+      title="Bachelor of Science at University of Central Florida"
+      subtitle="2018 - 2021, Orlando, FL, USA"
+      secondSubtitle="GPA: 3.8/4.0 (Summa Cum Laude)"
+    />
+  </div>
+
+  <div class="mb-5">
+    <div
+      class="text-3xl w-full font-bold underline underline-offset-8 decoration-4"
+    >
+      Experience
+    </div>
+  </div>
+
+  <span class="time-line-container mb-10">
+    <TimeLineElement
+      title="LinkLive.ai | Full Stack Developer"
+      subtitle="March 2023 - Present, San Francisco, CA, USA (Remote)"
+    >
+      <div class="flex flex-col space-y-1 mb-2">
+        <span>
+          ◦ Creating new workforce management tools, using Angular, NestJS, and
+          AWS, securing over $800,000 in revenue.
+        </span>
+        <span>
+          ◦ Managing activity forecast and schedule generation using NestJS,
+          automating automating updates to a MongoDB database for use by an
+          AngularJS frontend.
+        </span>
+        <span>
+          ◦ Implementing a schedule generation service using Python, leveraging
+          Pandas to generate optimal employee shifts.
+        </span>
+        <span>
+          ◦ Building a real-time performance monitoring platform to analyze work
+          shift performance, using NestJS to update SQL data for the AngularJS
+          frontend.
+        </span>
+      </div>
+
+      <div class="font-semibold mb-3">
+        <text class="text-1xl">Relevant Skills:</text>
+
+        <div class="flex space-x-2 mt-1">
+          <img
+            height="24"
+            width="24"
+            src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/typescript/typescript-original.svg"
+          />
+          <img
+            height="24"
+            width="24"
+            src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nodejs/nodejs-original-wordmark.svg"
+          />
+          <img
+            height="24"
+            width="24"
+            src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/angular/angular-original.svg"
+          />
+          <img
+            height="24"
+            width="24"
+            src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/amazonwebservices/amazonwebservices-original-wordmark.svg"
+          />
+          <img
+            height="24"
+            width="24"
+            src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nestjs/nestjs-original.svg"
+          />
+        </div>
+      </div>
+    </TimeLineElement>
+    <TimeLineElement
+      title="Google | Software Engineer L3"
+      subtitle="September 2022 - February 2023, Sunnyvale, CA, USA"
+    >
+      <div class="flex flex-col space-y-1 mb-2">
+        <span>
+          ◦ Designed security measure for Google Cloud Platforms, preventing
+          future vulnerabilities, as part of Team abCloud.
+        </span>
+        <span>
+          ◦ Developed a context-aware security feature to encapsulate systems
+          running on GCP, using C++ and Python, improving third-party container
+          security.
+        </span>
+        <span>
+          ◦ Maintained security standards in new features by developing new unit
+          and integration tests, written in C++
+        </span>
+      </div>
+
+      <div class="font-semibold mb-3">
+        <text class="text-1xl">Relevant Skills:</text>
+
+        <div class="flex space-x-2 mt-1">
+          <img
+            height="24"
+            width="24"
+            src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/cplusplus/cplusplus-original.svg"
+          />
+          <img
+            height="24"
+            width="24"
+            src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original-wordmark.svg"
+          />
+          <img
+            height="24"
+            width="24"
+            src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/googlecloud/googlecloud-original.svg"
+          />
+        </div>
+      </div>
+    </TimeLineElement>
+    <TimeLineElement
+      title="Google | Software Engineer Intern"
+      subtitle="May 2021 - August 2021, Mountain View, CA, USA"
+    >
+      <div class="flex flex-col space-y-1 mb-2">
+        <span>
+          ◦ Redesigned Google's code coverage generation for Baseboard
+          Management Controllers, improving build times and enhancing
+          code-coverage results.
+        </span>
+        <span>
+          ◦ Improved clarity and efficiency in build information by developing
+          unit tests for existing codebase.
+        </span>
+      </div>
+
+      <div class="font-semibold mb-3">
+        <text class="text-1xl">Relevant Skills:</text>
+
+        <div class="flex space-x-2 mt-1">
+          <img
+            height="24"
+            width="24"
+            src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/cplusplus/cplusplus-original.svg"
+          />
+        </div>
+      </div>
+    </TimeLineElement>
+    <TimeLineElement
+      title="JP Morgan Chase & Co. | Software Engineer Intern"
+      subtitle="June 2020 - August 2020, Tampa, FL, USA"
+    >
+      <div class="flex flex-col space-y-1 mb-2">
+        <span>
+          ◦ Developed a statistical model, using Pandas, to detect real-time
+          anomalies in credit card transaction error. This automated the team's
+          previous manual tracking of transaction anomalies
+        </span>
+        <span>
+          ◦ Optimized average run-time by implementing data pre-processing and
+          caching, reducing run-time from an hour to under 3 minutes.
+        </span>
+      </div>
+
+      <div class="font-semibold mb-3">
+        <text class="text-1xl">Relevant Skills:</text>
+
+        <div class="flex space-x-2 mt-1">
+          <img
+            height="24"
+            width="24"
+            src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original-wordmark.svg"
+          />
+
+          <img
+            height="24"
+            width="24"
+            src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/pandas/pandas-original-wordmark.svg"
+          />
+
+          <img
+            height="24"
+            width="24"
+            src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/github/github-original-wordmark.svg"
+          />
+        </div>
+      </div>
+    </TimeLineElement>
+  </span>
+
+  <div class="mb-5 mt-5">
+    <div
+      class="text-3xl w-full font-bold underline underline-offset-8 decoration-4"
+    >
+      Skills
+    </div>
+  </div>
+
+  <div class="flex flex-col space-y-4">
+    {
+      Object.values(skills).map(skill => {
+        return (
+          <div id={skill.displayName.replace(' ', '_')}>
+            <div>
+              <text>
+                <span class="font-semibold">{skill.displayName} |</span>{' '}
+                {skill.values.join(', ')}
+              </text>
+            </div>
+          </div>
+        );
+      })
+    }
+  </div>
+
+  <!-- <ul class="list-none md:columns-5 columns-2 mx-6">
+    <li>
+      <img
+        height="46"
+        width="46"
+        src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/typescript/typescript-original.svg"
+      />
+    </li>
+    <li>Skill Name</li>
+    <li>Skill Name</li>
+    <li>Skill Name</li>
+    <li>Skill Name</li>
+    <li>Skill Name</li>
+    <li>Skill Name</li>
+    <li>Skill Name</li>
+    <li>Skill Name</li>
+    <li>Skill Name</li>
+    <li>Skill Name</li>
+    <li>Skill Name</li>
+    <li>Skill Name</li>
+    <li>Skill Name</li>
+    <li>Skill Name</li>
+  </ul> -->
+</BaseLayout>

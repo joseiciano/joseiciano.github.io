@@ -1,0 +1,21 @@
+---
+const { title, subtitle, secondTitle, secondSubtitle } = Astro.props;
+---
+
+<div class="flex">
+  <div class="main-dot">
+    <span class="w-4 h-4 bg-primary block rounded-full mt-1"></span>
+    <span
+      class="main-line bg-primary block h-full w-[0.1225rem] translate-x-[0.425rem]"
+    ></span>
+  </div>
+  <div class="main-content bd-grid px-5">
+    <h3 class="font-semibold mb-1">{title}</h3>
+    <span class="font-light text-sm">{subtitle}</span>
+    <h3 class="font-semibold mt-1 mb-1">{secondTitle}</h3>
+    <span class="font-light text-sm">{secondSubtitle}</span>
+    <p class="my-2 text-justify">
+      <slot />
+    </p>
+  </div>
+</div>
