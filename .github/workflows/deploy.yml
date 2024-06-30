@@ -16,11 +16,22 @@ jobs:
     steps:
       - name: Checkout your repository using git
         uses: actions/checkout@v4
-      - name: Install, build, and upload your site
-        uses: withastro/action@v2
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
         with:
-          # Specify the pnpm version
-          package-manager: pnpm@7 # Replace 7 with the desired pnpm version if different
+          node-version: 20
+          cache: "pnpm"
+      - name: Install pnpm
+        run: npm install -g pnpm
+      - name: Install dependencies
+        run: pnpm install --no-frozen-lockfile
+      - name: Build the site
+        run: pnpm run build # Adjust this command if your build script is different
+      - name: Upload site
+        uses: actions/upload-artifact@v3
+        with:
+          name: site
+          path: public # Adjust this path if your build output is different
 
   deploy:
     needs: build
@@ -29,6 +40,11 @@ jobs:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
     steps:
+      - name: Download site
+        uses: actions/download-artifact@v3
+        with:
+          name: site
+          path: public # Adjust this path if your build output is different
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
