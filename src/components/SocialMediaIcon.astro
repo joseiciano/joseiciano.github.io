@@ -1,3 +1,8 @@
-<div class="btn btn-outline btn-square rounded-md hover:bg-primary">
+---
+const {isSmall} = Astro.props;
+---
+
+
+<div class=`btn btn-outline btn-square rounded-md hover:bg-primary ${isSmall ? 'btn-sm' : ''}`>
   <slot />
 </div>
